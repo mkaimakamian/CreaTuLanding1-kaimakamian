@@ -1,0 +1,7 @@
+export default function Aboutus() {
+    return (
+        <div> Donec suscipit nisi sollicitudin velit vestibulum, sed hendrerit ante vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque tempus ultricies velit eu tempus. Etiam congue, diam nec pulvinar euismod, felis leo molestie dolor, quis vulputate nisi turpis ac sapien. Sed quis ultricies arcu. Integer at iaculis tortor. Phasellus ac risus ullamcorper, efficitur dui a, commodo elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque sodales fringilla sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus lectus at massa dapibus, ac sodales dolor malesuada. Sed finibus vulputate eros, at ornare neque ultrices ut.
+
+            Donec et felis laoreet, eleifend sapien sed, rutrum dolor. Duis nulla lacus, iaculis non consectetur vel, ultricies vitae urna. Donec nec consectetur tortor, non scelerisque nisi. Morbi placerat nibh consectetur nulla aliquam ornare. Quisque et elit justo. Nam efficitur libero eu dolor tempus, et molestie sem cursus. Vivamus iaculis, arcu in sodales suscipit, nibh velit fringilla ante, vel maximus mauris nibh id nisi. Proin vitae pulvinar elit. Duis vulputate rutrum interdum. Fusce varius eros ut lacus consequat gravida. Pellentesque congue at est posuere egestas. Donec facilisis lobortis lacus, vel accumsan nibh pretium euismod. </div>
+    )
+}
