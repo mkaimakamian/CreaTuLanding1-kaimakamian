@@ -1,7 +1,6 @@
 import axios from "axios";
 
-
-const GetItems = async () => {
+export const GetItems = async () => {
 
     const data = await axios.get(
         "https://fakestoreapi.com/products/category/electronics"
@@ -10,4 +9,11 @@ const GetItems = async () => {
     return data;
 }
 
-export default GetItems;
+export const GetItem = async (id) => {
+
+    const data = await axios.get(
+        `https://fakestoreapi.com/products/${id}`
+    ).then(response => response.data);
+
+    return data;
+}

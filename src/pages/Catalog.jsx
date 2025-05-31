@@ -1,4 +1,4 @@
-import ItemListContainer from "../components/ItemListContainer";
+import ItemListContainer from "../components/ItemList";
 
 export default function Catalog() {
 

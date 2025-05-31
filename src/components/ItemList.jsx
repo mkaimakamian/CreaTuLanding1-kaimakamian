@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import GetItems from "../apis/catalog";
-import { Link } from "react-router-dom";
+import { GetItems } from "../apis/catalog";
 import Item from "./Item";
 
 const ItemListContainer = () => {
@@ -24,6 +23,7 @@ const ItemListContainer = () => {
 
 
     return (
+        // Faltan estilos!
         <div>
             {items.map(item => (
                 <Item key={item.id} {...item} />
@@ -31,7 +31,6 @@ const ItemListContainer = () => {
 
         </div >
     )
-
 }
 
 export default ItemListContainer
