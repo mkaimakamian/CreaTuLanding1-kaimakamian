@@ -26,8 +26,9 @@ export default function ItemDetail() {
             <p>{item.title}</p>
             <p>{item.category}</p>
             <p>{item.description}</p>
-            <p>{item.rating.rate} ⭐</p>
-            <p>{item.rating.count} ⭐</p>
+            {/* Por algún motivo, pese a que data.rating existe, indica que es undefined */}
+            {/* <p>{item.rating.rate} ⭐</p> */}
+            {/* <p>{item.rating.count} ⭐</p> */}
             <p>${item.price}</p>
             <img src={item.image} width={64} alt={item.title} />
         </div>
