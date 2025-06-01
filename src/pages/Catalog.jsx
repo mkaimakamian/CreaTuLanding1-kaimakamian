@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import { GetItemCategories, GetItems } from "../apis/catalog";
 import Item from "../components/Item";
-import { data } from "react-router-dom";
 
 export default function Catalog() {
 
@@ -53,6 +52,7 @@ export default function Catalog() {
         // TODO - incluir algún encabezado
 
         <div>
+            {/* Si esto lo hacemos componente, hay que ver cómo disparamos el cambio; un callback? */}
             <div>
                 <select onChange={(e) => setSelectedCategory(e.target.value)}>
                     <option value="all">All</option>
@@ -62,6 +62,8 @@ export default function Catalog() {
                 </select>
 
             </div >
+
+            {/* Analizar si conviene que esto sea un componente */}
             <div>
                 {filteredItems.map(item => (
                     <Item key={item.id} {...item} />
