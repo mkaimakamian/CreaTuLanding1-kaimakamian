@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { GetItemCategories, GetItems } from "../apis/catalog";
 import Item from "../components/Item";
+import { Stack } from "react-bootstrap";
 
 export default function Catalog() {
 
@@ -51,8 +52,7 @@ export default function Catalog() {
         // Faltan estilos!
         // TODO - incluir algún encabezado
 
-        <div>
-            {/* Si esto lo hacemos componente, hay que ver cómo disparamos el cambio; un callback? */}
+        <Stack gap={2} className="d-flex justify-content-center align-items-center min-vh-100">
             <div>
                 <select onChange={(e) => setSelectedCategory(e.target.value)}>
                     <option value="all">All</option>
@@ -69,7 +69,6 @@ export default function Catalog() {
                     <Item key={item.id} {...item} />
                 ))}
             </div >
-        </div>
-
+        </Stack>
     )
 }

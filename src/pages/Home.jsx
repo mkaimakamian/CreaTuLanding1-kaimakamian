@@ -5,7 +5,7 @@ export default function Home() {
         <div className="d-flex justify-content-center align-items-center min-vh-100">
             <div className="d-inline-block">
                 <Alert variant="success">
-                    <Alert.Heading>Muy buenos días!</Alert.Heading>
+                    <Alert.Heading>Bienvenido seas!</Alert.Heading>
                     <p>
                         Sí, lo sé, la home es la puerta de ingreso hacia lo más fantástico que tiene
                         este sitio y
