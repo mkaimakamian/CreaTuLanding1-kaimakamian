@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { GetItem } from "../apis/catalog";
 import { useEffect, useState } from "react";
+import { Card, CardFooter } from "react-bootstrap";
 
 export default function ItemDetail() {
     const { id } = useParams();
@@ -22,15 +23,34 @@ export default function ItemDetail() {
         fetchItem();
     }, [])
     return (
-        <div>
-            <p>{item.title}</p>
-            <p>{item.category}</p>
-            <p>{item.description}</p>
-            {/* Por algún motivo, pese a que data.rating existe, indica que es undefined */}
-            {/* <p>{item.rating.rate} ⭐</p> */}
-            {/* <p>{item.rating.count} ⭐</p> */}
-            <p>${item.price}</p>
-            <img src={item.image} width={64} alt={item.title} />
+        <div className="d-flex justify-content-center align-items-center min-vh-100">
+
+
+            <Card style={{ width: '18rem' }} className="text-center">
+                <Card.Img variant="top" src={item.image} />
+                <Card.Body>
+                    <Card.Title>{item.title}</Card.Title>
+                    <Card.Text>
+                        {item.description}
+
+                        {/* Por algún motivo, pese a que data.rating existe,
+                     indica que es undefined cuando paso del catálogo a este detalle.
+                     Sin embargo, si estando en el detalle decomento los votos y el rating,
+                     fnciona :/
+                     */}
+                        {/* <p className="mt-3">
+                        Votos: {item.rating.count}
+                        <p>
+                            Valoración : {item.rating.rate} ⭐
+                        </p>
+                    </p> */}
+
+                    </Card.Text>
+                    <CardFooter className="m-2">
+                        Precio: ${item.price}
+                    </CardFooter>
+                </Card.Body>
+            </Card >
         </div>
     )
 }

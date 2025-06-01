@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { GetItemCategories, GetItems } from "../apis/catalog";
 import Item from "../components/Item";
-import { data } from "react-router-dom";
+import { Stack } from "react-bootstrap";
 
 export default function Catalog() {
 
@@ -52,7 +52,7 @@ export default function Catalog() {
         // Faltan estilos!
         // TODO - incluir algún encabezado
 
-        <div>
+        <Stack gap={2} className="d-flex justify-content-center align-items-center min-vh-100">
             <div>
                 <select onChange={(e) => setSelectedCategory(e.target.value)}>
                     <option value="all">All</option>
@@ -62,12 +62,13 @@ export default function Catalog() {
                 </select>
 
             </div >
+
+            {/* Analizar si conviene que esto sea un componente */}
             <div>
                 {filteredItems.map(item => (
                     <Item key={item.id} {...item} />
                 ))}
             </div >
-        </div>
-
+        </Stack>
     )
 }
